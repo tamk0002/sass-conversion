@@ -1,0 +1,20 @@
+//media queries
+$bp-sm: 701px;
+$bp-md: 901px;
+$bp-lg: 1401px;
+
+@mixin smQuerie(){
+    @media all and(min-width:$bp-sm){
+        @content;
+    }
+}
+@mixin mdQuerie(){
+    @media all and(min-width:$bp-md){
+        @content;
+    }
+}
+@mixin lgQuerie(){
+    @media all and(min-width:$bp-lg){
+        @content;
+    }
+}
