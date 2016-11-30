@@ -5,7 +5,7 @@
 //@extend-elements
 //original selectors
 //.bg-header:before, .bg-header:after
-%extend_1 {
+%extend1 {
 	content: "";
 	position: absolute;
 	bottom: -1rem;
@@ -55,11 +55,11 @@ ul {
 	border-top: 1rem solid $DBlue;
 	position: relative;
 	&:before {
-		@extend %extend_1;
+		@extend %extend1;
 		left: 0;
 	}
 	&:after {
-		@extend %extend_1;
+		@extend %extend1;
 		right: 0;
 	}
 }
@@ -231,7 +231,7 @@ footer {
 		font-size: 1.414rem;
 	}
 }
-@media all and(min-width:$bp-sm) {
+@include smQuerie(){
 	header {
 		width: 700px;
 		margin: 0 auto;
@@ -331,7 +331,7 @@ footer {
 		float: left;
 	}
 }
-@media all and(min-width:$bp-md) {
+@include mdQuerie(){
 	header {
 		width: 900px;
 		margin: 0 auto;
@@ -443,24 +443,10 @@ footer {
 			display: none;
 		}
 	}
-	.col-3 {
-		float: left;
-		width: 30%;
-		margin-left: 5%;
-		&:first-child {
-			margin-left: 0;
-		}
-	}
-	.col-4 {
-		width: 22%;
-		margin-left: 4%;
-		float: left;
-		&:first-child {
-			margin-left: 0;
-		}
-	}
+	@include col3();
+	@include col4();
 }
-@media all and(min-width:$bp-lg) {
+@include lgQuerie(){
 	header {
 		width: 1400px;
 		margin: 0 auto;
@@ -581,22 +567,8 @@ footer {
 			display: none;
 		}
 	}
-	.col-3 {
-		float: left;
-		width: 30%;
-		margin-left: 5%;
-		&:first-child {
-			margin-left: 0;
-		}
-	}
-	.col-4 {
-		width: 22%;
-		margin-left: 4%;
-		float: left;
-		&:first-child {
-			margin-left: 0;
-		}
-	}
+	@include col3();
+	@include col4();
 }
 .clearfix:after {
 	display: table;

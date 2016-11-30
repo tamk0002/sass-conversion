@@ -1,3 +1,4 @@
+//font stacks
 @mixin serif0(){
     font-family: $font_4, $font_5, $font_6, $font_7, $font_8;
 }
@@ -12,4 +13,43 @@
 }
 @mixin sans-serif(){
     font-family: $font_0, $font_1, $font_2, $font_3;
+}
+
+//media queries
+@mixin smQuerie(){
+    @media all and(min-width:$bp-sm){
+        @content;
+    }
+}
+@mixin mdQuerie(){
+    @media all and(min-width:$bp-md){
+        @content;
+    }
+}
+@mixin lgQuerie(){
+    @media all and(min-width:$bp-lg){
+        @content;
+    }
+}
+
+//column
+@mixin col3(){
+    .col-3 {
+		float: left;
+		width: 30%;
+		margin-left: 5%;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+@mixin col4(){
+    .col-4 {
+		width: 22%;
+		margin-left: 4%;
+		float: left;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
 }
